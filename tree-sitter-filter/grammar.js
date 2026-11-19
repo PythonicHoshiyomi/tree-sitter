@@ -8,6 +8,8 @@ module.exports = grammar({
 
     _expr: $ => choice(
       $.comparison,
+      $.in_expression,
+      $.contains_expression,
       $.and_expression,
       $.or_expression,
       $.not_expression,
@@ -18,6 +20,18 @@ module.exports = grammar({
       field('field', $.identifier),
       field('operator', choice('=', '!=', '>', '<', '>=', '<=')),
       field('value', $._value),
+    ),
+
+    in_expression: $ => seq(
+      field('field', $.identifier),
+      'in',
+      seq('(', field('values', $._value), repeat(seq(',', field('values', $._value))), ')'),
+    ),
+
+    contains_expression: $ => seq(
+      field('field', $.identifier),
+      'contains',
+      field('value', $.string),
     ),
 
     or_expression: $ => prec.left(1, seq(field('left', $._expr), 'or', field('right', $._expr))),
