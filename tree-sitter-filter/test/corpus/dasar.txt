@@ -66,3 +66,17 @@ Pengelompokan tanda kurung
     (comparison
       (identifier)
       (number))))
+
+==================
+Operasi not dan boolean
+==================
+
+not archived = true
+
+---
+
+(query
+  (not_expression
+    (comparison
+      (identifier)
+      (boolean))))
