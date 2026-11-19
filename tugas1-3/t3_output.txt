@@ -1,0 +1,74 @@
+=== Query: semua.scm ===
+@id  baris 4: sqrt
+@id  baris 8: print
+@id  baris 10: b
+@id  baris 14: hasil
+@id  baris 13: hasil
+@id  baris 16: radius
+@id  baris 18: radius
+@id  baris 20: nama
+@id  baris 6: halo
+@id  baris 10: tambah
+@id  baris 16: hitung_luas_lingkaran
+@id  baris 20: info_mahasiswa
+@id  baris 1: os
+@id  baris 2: sys
+@id  baris 4: pi
+@id  baris 12: hasil
+@id  baris 20: nim
+@id  baris 22: nama
+@id  baris 22: jurusan
+@id  baris 24: __name__
+@id  baris 25: halo
+@id  baris 27: print
+@id  baris 3: pathlib
+@id  baris 12: a
+@id  baris 10: a
+@id  baris 13: print
+@id  baris 28: info_mahasiswa
+@id  baris 4: math
+@id  baris 3: Path
+@id  baris 12: b
+@id  baris 18: pi
+@id  baris 20: jurusan
+@id  baris 22: print
+@id  baris 22: nim
+@id  baris 26: tambah
+@id  baris 27: hitung_luas_lingkaran
+
+=== Query: fungsi.scm ===
+Fungsi: halo                      Jumlah parameter: 0
+Fungsi: tambah                    Jumlah parameter: 2
+Fungsi: hitung_luas_lingkaran     Jumlah parameter: 1
+Fungsi: info_mahasiswa            Jumlah parameter: 3
+
+=== Query: print.scm ===
+@fn  baris 8: print
+@fn  baris 27: print
+@fn  baris 13: print
+@fn  baris 22: print
+@args  baris 8: ("Halo dunia!")
+@args  baris 22: (f"Mahasiswa: {nama}, NIM: {nim}, Jurusan: {jurusan}")
+@args  baris 13: ("Hasil penjumlahan:", hasil)
+@args  baris 27: ("Luas r=7:", hitung_luas_lingkaran(7))
+
+=== Query: import.scm ===
+@modul  baris 1: os
+@modul  baris 3: pathlib
+@modul  baris 4: math
+@modul  baris 2: sys
+
+=== Query: docstring.scm ===
+Fungsi: halo
+Docstring: """Fungsi sapaan tanpa parameter."""
+
+Fungsi: tambah
+Docstring: """Menjumlahkan dua buah bilangan."""
+
+Fungsi: hitung_luas_lingkaran
+Docstring: """Menghitung luas lingkaran berdasarkan jari-jari."""
+
+Fungsi: info_mahasiswa
+Docstring: """Mencetak info mahasiswa dengan tiga parameter."""
+
+
