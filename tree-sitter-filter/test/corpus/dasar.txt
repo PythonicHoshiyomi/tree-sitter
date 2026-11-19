@@ -1,5 +1,5 @@
 ==================
-Perbandingan dasar
+Perbandingan string
 ==================
 
 status = "open"
@@ -10,3 +10,16 @@ status = "open"
   (comparison
     (identifier)
     (string)))
+
+==================
+Perbandingan angka
+==================
+
+priority >= 2
+
+---
+
+(query
+  (comparison
+    (identifier)
+    (number)))
