@@ -1,1 +1,5 @@
 /.venv
+/.tree-sitter
+/.localappdata
+*.dll
+*.exe
