@@ -1,5 +1,5 @@
 ==================
-Perbandingan string
+Perbandingan dasar
 ==================
 
 status = "open"
@@ -8,21 +8,8 @@ status = "open"
 
 (query
   (comparison
-    (identifier)
-    (string)))
-
-==================
-Perbandingan angka
-==================
-
-priority >= 2
-
----
-
-(query
-  (comparison
-    (identifier)
-    (number)))
+    field: (identifier)
+    value: (string)))
 
 ==================
 and lebih kuat dari or
@@ -34,16 +21,16 @@ a = 1 or b = 2 and c = 3
 
 (query
   (or_expression
-    (comparison
-      (identifier)
-      (number))
-    (and_expression
-      (comparison
-        (identifier)
-        (number))
-      (comparison
-        (identifier)
-        (number)))))
+    left: (comparison
+      field: (identifier)
+      value: (number))
+    right: (and_expression
+      left: (comparison
+        field: (identifier)
+        value: (number))
+      right: (comparison
+        field: (identifier)
+        value: (number)))))
 
 ==================
 Pengelompokan tanda kurung
@@ -55,17 +42,17 @@ Pengelompokan tanda kurung
 
 (query
   (and_expression
-    (parenthesized
+    left: (parenthesized
       (or_expression
-        (comparison
-          (identifier)
-          (number))
-        (comparison
-          (identifier)
-          (number))))
-    (comparison
-      (identifier)
-      (number))))
+        left: (comparison
+          field: (identifier)
+          value: (number))
+        right: (comparison
+          field: (identifier)
+          value: (number))))
+    right: (comparison
+      field: (identifier)
+      value: (number))))
 
 ==================
 Operasi not dan boolean
@@ -77,6 +64,6 @@ not archived = true
 
 (query
   (not_expression
-    (comparison
-      (identifier)
-      (boolean))))
+    operand: (comparison
+      field: (identifier)
+      value: (boolean))))
